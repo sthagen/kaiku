@@ -4,7 +4,7 @@ version = "2022.2.8"
 edition = "2021"
 
 [dependencies]
-clap = "3.0.14"
+clap = "3"
 
 [dev-dependencies]
 assert_cmd = "2"
