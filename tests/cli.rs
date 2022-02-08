@@ -6,7 +6,7 @@ type TestResult = Result<(), Box<dyn std::error::Error>>;
 
 #[test]
 fn dies_no_args() -> TestResult {
-    Command::cargo_bin("echor")?
+    Command::cargo_bin("kaiku")?
         .assert()
         .failure()
         .stderr(predicate::str::contains("USAGE"));
@@ -15,7 +15,7 @@ fn dies_no_args() -> TestResult {
 
 fn run(args: &[&str], expected_file: &str) -> TestResult {
     let expected = fs::read_to_string(expected_file)?;
-    Command::cargo_bin("echor")?
+    Command::cargo_bin("kaiku")?
         .args(args)
         .assert()
         .success()
