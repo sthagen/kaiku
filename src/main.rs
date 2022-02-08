@@ -1,7 +1,7 @@
 use clap::{App, Arg};
 
 fn main() {
-    let matches = App::new("echor")
+    let matches = App::new("kaiku")
         .version("2022.2.8")
         .author("An Author <here@m.e>")
         .about("Kaiku (English: echo)")
@@ -10,7 +10,8 @@ fn main() {
                 .value_name("TEXT")
                 .help("Input text")
                 .required(true)
-                .min_values(1),
+                .min_values(1)
+                .allow_invalid_utf8(true),
         )
         .arg(
             Arg::new("omit_newline")
