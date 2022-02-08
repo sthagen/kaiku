@@ -2,9 +2,9 @@ use clap::{App, Arg};
 
 fn main() {
     let matches = App::new("echor")
-        .version("0.1.0")
+        .version("2022.2.8")
         .author("An Author <here@m.e>")
-        .about("Rusty echo")
+        .about("Kaiku (English: echo)")
         .arg(
             Arg::new("text")
                 .value_name("TEXT")
